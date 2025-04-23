@@ -9,22 +9,28 @@ processfastq(
   dir = getwd(),
   paired = FALSE,
   threads = 4L,
-  molecule = "RNA"
+  molecule = "RNA",
+  species = NULL
 )
 }
 \arguments{
-\item{file}{A list of paths to FASTQ files. If no paths are entered, defaults to all fastq files in dir.}
+\item{file}{A list of paths to FASTQ files. If no paths are entered, defaults
+to all fastq files in dir.}
 
-\item{dir}{Output directory.}
+\item{dir}{Output directory. By default, it uses the current working directory.}
 
 \item{paired}{A logical indicating whether the data is single or pair-end.}
 
 \item{threads}{The number of cores to use in the process.}
 
 \item{molecule}{A character string indicating either DNA or RNA samples.}
+
+\item{species}{A character string indicating the ID of the species to use
+(e.g. "1" for hg19,
+"2" for hg38...). If NULL, an interactive menu will prompt the user.}
 }
 \value{
-A list of file paths to created BAM files
+A list of \code{BamFile} objects.
 }
 \description{
 This function takes in FASTQ files and performs quality control before

@@ -9,7 +9,8 @@ geneExpression(
   groups = NULL,
   outputdir = getwd(),
   threads = 4L,
-  paired = FALSE
+  paired = FALSE,
+  species = NULL
 )
 }
 \arguments{
@@ -22,6 +23,10 @@ geneExpression(
 \item{threads}{Number of cores to use.}
 
 \item{paired}{Indicates whether the samples are from paired-end reads.}
+
+\item{species}{A character string indicating the ID of the species to use
+(e.g. "1" for hg19,
+"2" for hg38...). If NULL, an interactive menu will prompt the user.}
 }
 \value{
 A data frame list containing all of the differential expression comparison.

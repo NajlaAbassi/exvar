@@ -4,7 +4,7 @@
 \alias{callcnv}
 \title{Call copy number variants}
 \usage{
-callcnv(controldir, experimentdir, outputdir = getwd())
+callcnv(controldir, experimentdir, outputdir = getwd(), species = NULL)
 }
 \arguments{
 \item{controldir}{The parent directory of the sample directories.}
@@ -13,11 +13,9 @@ callcnv(controldir, experimentdir, outputdir = getwd())
 
 \item{outputdir}{The directory in which to place copy number call.}
 
-\item{control}{The names of the folders in which control BAM files are. If NULL, all folders in controldir will be checked for BAM files.}
-
-\item{experiment}{The names of the folders in which sample BAM files are. If NULL, all folders in experimentdir will be checked for BAM files.}
-
-\item{bed}{A character string indicating BED file path or a TxDb object from which to extract a BED file.}
+\item{species}{A character string indicating the ID of the species to use
+(e.g. "1" for hg19,
+"2" for hg38...). If NULL, an interactive menu will prompt the user.}
 }
 \value{
 A data frame containing copy number calls.

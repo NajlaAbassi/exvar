@@ -9,7 +9,8 @@ count(
   groups = NULL,
   outputdir = getwd(),
   threads = 4L,
-  paired = FALSE
+  paired = FALSE,
+  species = NULL
 )
 }
 \arguments{
@@ -17,19 +18,24 @@ count(
 
 \item{groups}{Folder names of the sample groups. The default is all folders in dir.}
 
-\item{outputdir}{Output directory of CSV file.}
+\item{outputdir}{Output directory of CSV file. By default, it uses the current
+working directory.}
 
 \item{threads}{Number of cores to use.}
 
 \item{paired}{Indicates whether the samples are from paired-end reads.}
+
+\item{species}{A character string indicating the ID of the species to use
+(e.g. "1" for hg19,
+"2" for hg38...). If NULL, an interactive menu will prompt the user.}
 }
 \value{
-A data frame containing gene counts.
+A data frame containing annotated gene counts.
 }
 \description{
 This function counts reads of gene regions between sample groups.
 It assumes that sample BAM files are ordered in a directory structure such as
 "group/sample/" as processfastq() would order it. It outputs a CSV file
-showing gene counts. Works similarly to expression(), but outputs count
+showing gene counts. Works similarly to geneExpression(), but outputs count
 data instead of differential expression data.
 }
