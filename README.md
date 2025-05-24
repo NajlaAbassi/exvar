@@ -111,9 +111,12 @@ The RAM and CPU requirements differ according to the analyzed data size. For Hum
 Artistic license 2.0
 Any restrictions to use by non-academics: None.
 
-## Citation
-
+## Cite the exvar article
+Ben Aribi, H., Dixon, I., Abassi, N. and Awe, O.I. (2025). Efficient and easy gene expression and genetic variation data analysis and visualization using exvar. <i>Scientific Reports 15, 12264</i>.
+https://doi.org/10.1038/s41598-025-93067-5
+<!--
 Ben Aribi, H., Dixon, I., Abassi, N., & Awe, O. I. (2024). exvar: An R Package for Gene Expression and Genetic Variation Data Analysis and Visualization. Zenodo. https://doi.org/10.5281/zenodo.13459761
+-->
 
 ## Contributors
 
